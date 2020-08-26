@@ -1,0 +1,16 @@
+body{
+    background-color: #FFFFF6;
+}
+.dot {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: lightgrey;
+    border-radius: 50%;
+    display: inline-block;
+  }
+.dot:hover{
+    background-color: red;
+}
