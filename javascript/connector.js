@@ -7,13 +7,14 @@ var con = mysql.createConnection({
     database: "manager"
 });
 
-var sql = "SELECT test";
+var sql = "SELECT namn FROM test";
 
 con.connect(function (err) {
     if (err) throw err;
     console.log("Connected");
-    con.query(sql, function (err, result) {
+    con.query(sql, function (err, result, fields) {
         if (err) throw err;
-        console.log("Result: " + result);
+        console.log(result);
+        
     });
 });
