@@ -12,7 +12,7 @@ var sql = "SELECT namn FROM test";
 con.connect(function (err) {
     if (err) throw err;
     console.log("Connected");
-    con.query(sql, function (err, result, fields) {
+    con.query("SELECT namn FROM test", function (err, result, fields) {
         if (err) throw err;
         console.log(result);
         
