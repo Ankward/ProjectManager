@@ -13,17 +13,16 @@
     z-index: -1;
     transition: 0.4s;
   }
-#dot:hover{
+.dot:hover{
     background-color: rgb(87, 136, 241);
     transition: 0.2s;
 }
-
 .plus{
     position: relative;
     width: 30px;
     height: 30px;
     margin: auto;
-    content:url(plus.png);
+   
 }
 
 .scheme{
