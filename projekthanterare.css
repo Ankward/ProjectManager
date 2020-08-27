@@ -1,7 +1,7 @@
 body{
     background: #4C4C4C;
 }
-#dot {
+.dot {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -16,17 +16,16 @@ body{
     z-index: -1;
     transition: 0.4s;
   }
-#dot:hover{
+.dot:hover{
     background-color: rgb(87, 136, 241);
     transition: 0.2s;
 }
-
 .plus{
-    position: relative;
+    position: absolute;
     width: 35px;
     height: 35px;
     margin: auto;
-    content:url(plus.png);
+   
 }
 .block1{
     position: absolute;
@@ -61,9 +60,4 @@ body{
     font-size: 20px;
     color: black;
     top: 20px;
-}
-.test {
-    background: black;
-    width: 20%;
-    height: 30px;
 }
