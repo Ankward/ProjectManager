@@ -1,28 +1,27 @@
-// document.getElementById("dot").onclick = function () {
-    var ok = true;
+var newtask;
 
-     if (ok === true) {
-          var div = document.createElement('div');
-           
-          div.className = 'test';       
-            //div.style.backgroundColor = "black";
-
-       document.getElementsByTagName('body')[0].appendChild(div);
+class task {
+    constructor(name, id, color) {
+        this.name = name;
+        this.id = id;
+        this.color = color;
     }
-};
-//*
 
-document.getElementById("dot").onclick = function () {
+    make() {
+        var div = document.createElement('div');
+        div.style.height = "100px";
+        div.style.backgroundColor = "black";
+        
 
-    var ok = true;
 
-    if (ok === true) {
-      var div = document.createElement('test');
-      div.style.backgroundColor = "black";
-      div.style.position = "absolute";
-      div.style.left = "50px";
-      div.style.top = "50px";
+        document.body.appendChild(div);
+    }
+}
 
-      document.getElementsByTagName('body')[0].appendChild(div); // add it to any dom element you want
-   }
-};
+window.onload = function () {
+    document.getElementById("block").onclick = function () {
+        newtask = new task("Kim", 1, "Blå");
+        newtask.make();
+
+    }
+}
