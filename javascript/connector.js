@@ -4,10 +4,10 @@ var con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "manager"
+    database: "plum"
 });
 
-var sql = "SELECT test";
+var sql = "SELECT member";
 
 con.connect(function (err) {
     if (err) throw err;
