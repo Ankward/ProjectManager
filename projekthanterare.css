@@ -1,6 +1,3 @@
-body{
-    background: #4C4C4C;
-}
 #dot {
     position: absolute;
     top: 20px;
@@ -23,11 +20,19 @@ body{
 
 .plus{
     position: relative;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     margin: auto;
     content:url(plus.png);
 }
+
+.scheme{
+    position: relative;
+    height: 50%;
+    width: 50%;
+    background-color: rebeccapurple;
+}
+
 .block1{
     position: absolute;
     width: 300px;
@@ -62,6 +67,11 @@ body{
     color: black;
     top: 20px;
 }
+
+.group {
+    overflow-x: scroll;
+}
+
 .test {
     background: black;
     width: 20%;

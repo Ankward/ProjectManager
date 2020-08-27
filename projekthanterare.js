@@ -1,5 +1,6 @@
 // document.getElementById("dot").onclick = function () {
-    var ok = true;
+window.onload(); {
+var ok = true;
 
      if (ok === true) {
           var div = document.createElement('div');
@@ -10,9 +11,9 @@
        document.getElementsByTagName('body')[0].appendChild(div);
     }
 };
-//*
 
-document.getElementById("dot").onclick = function () {
+
+document.getElementById("test").onclick = function () {
 
     var ok = true;
 
