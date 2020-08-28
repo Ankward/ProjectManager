@@ -11,17 +11,17 @@ class task {
 
         
         var div = document.createElement('div');
-        div.className = 'a';
+        div.id = 'a';
         div.style.backgroundColor = "red";
         
-        if ($(".a")[0]){
-            div.className = 'b';
+        if ($("#a")[0]){
+            div.id = 'b';
             div.style.backgroundColor = "green";
         } else {
             
         }
-        if ($(".b")[0]){
-            div.className = 'c';
+        if ($("#b")[0]){
+            div.id = 'c';
             div.style.backgroundColor = "yellow";
         } else {
             
