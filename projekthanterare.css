@@ -40,6 +40,20 @@ body{
     top: 0px;
     width: 300px;
     height: 100vh;
-    right: 0;
+    right: 0px;
+    position:absolute !important;
+}
+.b{
+    top: 0px;
+    width: 300px;
+    height: 100vh;
+    right: 300px;
+    position:absolute !important;
+}
+.c{
+    top: 0px;
+    width: 300px;
+    height: 100vh;
+    right: 600px;
     position:absolute !important;
 }
