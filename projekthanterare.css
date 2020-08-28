@@ -25,39 +25,21 @@ body{
     width: 35px;
     height: 35px;
     margin: auto;
-   
 }
-.block1{
+.block{
     position: absolute;
-    width: 300px;
+    width: 900px;
     height: 100vh;
     top: 0px;
-    right: 600px;
+    right: 0px;
     background-color: #85C7F2;
     text-align: center;
 }
-.block2{
-    position: absolute;
+
+.a{
+    top: 0px;
     width: 300px;
     height: 100vh;
-    top: 0px;
-    right: 300px;
-    background-color: #85C7F2;
-    text-align: center;
-}
-.block3{
-    position: absolute;
-    width: 300px;
-    height: 100vh;
-    top: 0px;
     right: 0;
-    background-color: #85C7F2;
-    text-align: center;
-}
-.block1 a, .block2 a, .block3 a{
-    position: relative;
-    font-family: sans-serif;
-    font-size: 20px;
-    color: black;
-    top: 20px;
+    position:absolute !important;
 }

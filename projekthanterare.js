@@ -6,12 +6,11 @@ class task {
         this.id = id;
         this.color = color;
     }
-
+ 
     make() {
         var div = document.createElement('div');
-        div.style.height = "100px";
-        div.style.backgroundColor = "black";
-        
+        div.className = 'a';
+        div.style.backgroundColor = "red";
 
 
         document.body.appendChild(div);
