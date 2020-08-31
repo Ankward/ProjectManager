@@ -1,14 +1,19 @@
+/*jshint esversion: 8 */
+
 const express = require('express');
 const connector = express();
 const cors = require('cors');
 const dotenv = require('dotenv');
+
 dotenv.config();
 
-const dbconnect = require('./dbconnect');
+const dbConnect = require('./dbConnect');
 
 connector.use(cors());
 connector.use(express.json());
-connector.use(express.urlencoded({ extended : false }));
+connector.use(express.urlencoded({
+    extended: false
+}));
 
 
 //create
@@ -19,9 +24,13 @@ connector.post('/insert', (request, response) => {
 //read
 
 connector.get('/getAll', (request, response) => {
-    response.json({
-        success: true
-    });
+    const db = dbConnect.getDbServiceInsance();
+
+    const result = db.getAllData();
+
+    result
+    .then(data => response.json({data : data}))
+    .catch(err => console.log(err));
 });
 
 

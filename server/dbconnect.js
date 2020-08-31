@@ -1,5 +1,8 @@
+/*jshint esversion: 8 */
+
 const mysql = require('mysql');
 const dotenv = require('dotenv');
+let instance = null;
 dotenv.config();
 
 const connection = mysql.createConnection({
@@ -13,10 +16,35 @@ const connection = mysql.createConnection({
 
 connection.connect((err) => {
 
-    if(err){
-        console.log("bad");
+    if (err) {
         console.log(err.message);
     }
-    console.log("good");
-    console.log('db ' + connection.state)
-})
+    //console.log('db ' + connection.state)
+});
+
+class dbConnect {
+    static getDbServiceInsance() {
+        return instance ? instance : new dbConnect();
+    }
+
+    async getAllData() {
+        try {
+            const response = await new Promise((resolve, reject) => {
+                const query = "SELECT * FROM test;";
+
+                connection.query(query, (err, results) => {
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
+                });
+
+            });
+            
+            return response;
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
+
+module.exports = dbConnect;
