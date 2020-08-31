@@ -1,4 +1,4 @@
-#dot {
+.dot {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -75,4 +75,8 @@
     background: black;
     width: 20%;
     height: 30px;
+}
+
+.project{
+    text-align: center;
 }
