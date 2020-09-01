@@ -32,11 +32,11 @@ class task {
         //colums.push(columnid);
         columnid += 1;
         div.style.backgroundColor = "#7495AB";
-
         this.element = div;
 
         if ($(".dragable")[0]) {
             div.className = 'dragable';
+           
 
         } else {
 
@@ -47,10 +47,11 @@ class task {
         } else {
 
         }
-
+       
 
         document.body.appendChild(div);
-
+        $('#' + div.id).css('left', (395 + div.id * 300) + 'px');
+        
 
         $(function () {
             $(".dragable").draggable();
