@@ -1,41 +1,90 @@
 var newtask;
 var newproject;
 
+var columnid = 0;
+var colums = new Array();
+var spacebetween = 200;
+
 class task {
-    constructor(name, id, color) {
+    constructor(name, id, color, order) {
         this.name = name;
         this.id = id;
         this.color = color;
+        this.order = order;
+        this.pos = 0;
+        this.element = document.body;
     }
 
-    make1() {
-        var div = document.createElement('div');
-        div.style.height = "200px";
-        div.style.width = "200px";
-        div.style.backgroundColor = "gray";
-        div.style.marginLeft = "50px";
-        div.style.marginTop = "50px";
-        div.style.cssFloat = "left";
-        div.innerHTML = "New Project";
-        div.id = "info";
-        var input = document.createElement('input');
-        input.type = "text";
-        input.name = "projectName";
-        input.value = "Name";
-        var input2 = document.createElement('input');
-        input2.type = "text";
-        input2.name = "description";
-        input2.value = "Description";
-        div.appendChild(input);
-        div.appendChild(input2);
-        PList.appendChild(div);
+    updatepos() {
+        
+        this.element = this.order;
+
+
+        this.pos = spacebetween * this.order;
+
     }
+
+    make() {
+
+
+        var div = document.createElement('div');
+        div.className = 'dragable';
+        div.id = columnid;
+        //colums.push(columnid);
+        columnid += 1;
+        div.style.backgroundColor = "#7495AB";
+        this.element = div;
+
+        if ($(".dragable")[0]) {
+            div.className = 'dragable';
+           
+
+        } else {
+
+        }
+        if ($('[className="dragable"]').length > 1) {
+            div.className = 'dragable';
+            div.style.backgroundColor = "#7495AB";
+        } else {
+
+        }
+       
+
+        document.body.appendChild(div);
+        $('#' + div.id).css('left', (395 + div.id * 300) + 'px');
+        
+
+        $(function () {
+            $(".dragable").draggable();
+        });
+
+        this.updatepos();
+    }
+
+    remove() {
+        colums.splice(this.order, 1);
+        $("#" + this.order).remove();
+
+
+        for (var i = 0; i < colums.length; i++) {
+            if (colums[i].order > this.order) {
+                document.getElementById(colums[i].order).id = (colums[i].order - 1);
+                colums[i].order -= 1;
+                colums[i].updatepos();
+            }
+        }
+
+
+    }
+
 }
+
 
 window.onload = function () {
     document.getElementById("block").onclick = function () {
-        newtask = new task("Kim", 1, "Blå");
-        newtask.make1();
-        
+        colums.push(new task("Kim", 1, "Blå", columnid));
+        colums[columnid].make();
+
+
     }
 }
