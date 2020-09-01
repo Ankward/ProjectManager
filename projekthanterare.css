@@ -57,3 +57,8 @@ body{
     right: 0px;
     position:absolute !important;
 }
+.logo {
+    padding-left: 200px;
+    height: 100px;
+    width: 100px;
+}
