@@ -1,43 +1,89 @@
 var newtask;
 
+var columnid = 0;
+var colums = new Array();
+var spacebetween = 200;
+
 class task {
-    constructor(name, id, color) {
+    constructor(name, id, color, order) {
         this.name = name;
         this.id = id;
         this.color = color;
+        this.order = order;
+        this.pos = 0;
+        this.element = document.body;
     }
- 
+
+    updatepos() {
+        
+        this.element = this.order;
+
+
+        this.pos = spacebetween * this.order;
+
+    }
+
     make() {
 
-        
+
         var div = document.createElement('div');
-        div.id = 'a';
-        div.style.backgroundColor = "red";
-        
-        if ($("#a")[0]){
-            div.id = 'b';
-            div.style.backgroundColor = "green";
+        div.className = 'dragable';
+        div.id = columnid;
+        //colums.push(columnid);
+        columnid += 1;
+        div.style.backgroundColor = "#7495AB";
+        this.element = div;
+
+        if ($(".dragable")[0]) {
+            div.className = 'dragable';
+           
+
         } else {
-            
+
         }
-        if ($("#b")[0]){
-            div.id = 'c';
-            div.style.backgroundColor = "yellow";
+        if ($('[className="dragable"]').length > 1) {
+            div.className = 'dragable';
+            div.style.backgroundColor = "#7495AB";
         } else {
-            
+
         }
        
-        document.body.appendChild(div);
 
+        document.body.appendChild(div);
+        $('#' + div.id).css('left', (395 + div.id * 300) + 'px');
         
+
+        $(function () {
+            $(".dragable").draggable();
+        });
+
+        this.updatepos();
     }
+
+    remove() {
+        colums.splice(this.order, 1);
+        $("#" + this.order).remove();
+
+
+        for (var i = 0; i < colums.length; i++) {
+            if (colums[i].order > this.order) {
+                document.getElementById(colums[i].order).id = (colums[i].order - 1);
+                colums[i].order -= 1;
+                colums[i].updatepos();
+            }
+        }
+
+
+    }
+
 }
 
-    
+
 window.onload = function () {
     document.getElementById("block").onclick = function () {
-        newtask = new task("Kim", 1, "Blå");
-        newtask.make();
+        colums.push(new task("Kim", 1, "Blå", columnid));
+        colums[columnid].make();
+
 
     }
 }
