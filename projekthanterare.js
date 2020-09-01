@@ -8,34 +8,34 @@ class task {
         this.color = color;
     }
 
-    make() {
+    make1() {
         var div = document.createElement('div');
         div.style.height = "200px";
         div.style.width = "200px";
-        div.style.backgroundColor = "blue";
+        div.style.backgroundColor = "gray";
         div.style.marginLeft = "50px";
         div.style.marginTop = "50px";
         div.style.cssFloat = "left";
-
-        var label = document.createElement('label');
-        label.title = "projectName";
-        label.style.backgroundColor = "black";
-        "Project name: "
-
+        div.innerHTML = "New Project";
+        div.id = "info";
         var input = document.createElement('input');
         input.type = "text";
         input.name = "projectName";
-        input.id = "projectname";
-
-        console.log(document.body.appendChild(div));
-        console.log(document.body.appendChild(label));
-        console.log(document.body.appendChild(input));
+        input.value = "Name";
+        var input2 = document.createElement('input');
+        input2.type = "text";
+        input2.name = "description";
+        input2.value = "Description";
+        div.appendChild(input);
+        div.appendChild(input2);
+        PList.appendChild(div);
     }
 }
 
 window.onload = function () {
     document.getElementById("block").onclick = function () {
         newtask = new task("Kim", 1, "Blå");
-        newtask.make();
+        newtask.make1();
+        
     }
 }
