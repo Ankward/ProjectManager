@@ -33,6 +33,8 @@ class task {
         columnid += 1;
         div.style.backgroundColor = "#7495AB";
         this.element = div;
+        var image = document.createElement('image');
+        div.className = 'addtask';
 
         if ($(".dragable")[0]) {
             div.className = 'dragable';
@@ -48,6 +50,7 @@ class task {
 
         }
        
+        div.appendChild()
 
         document.getElementById("block").appendChild(div);
         $('#' + div.id).css('left', (20 + div.id * 300) + 'px');
