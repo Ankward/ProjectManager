@@ -49,11 +49,11 @@ class task {
         } else {
 
         }
-
+       
 
         document.getElementById("block").appendChild(div);
         $('#' + div.id).css('left', (20 + div.id * 300) + 'px');
-
+        
 
         $(function () {
             $(".dragable").draggable();

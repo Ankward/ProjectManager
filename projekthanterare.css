@@ -44,9 +44,12 @@ body{
 .block{
     position: absolute;
     width: 900px;
+    display: flex;
     height: 100vh;
     top: 0px;
     right: 0px;
+    align-items: center;
+    justify-content: center;
     background-color: #85C7F2;
     text-align: center;
     overflow-x: auto;
@@ -70,23 +73,23 @@ body{
     height: 500px;
     width: 500px;
     position: fixed;
-    top: 50px;
-    transform: translateX(-50%);
-    opacity: 0.35; 
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    opacity: 0.35;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    
+  
 }
 ::-webkit-scrollbar {
     height: 12px;
 }
- 
 
 ::-webkit-scrollbar-thumb {
-    background-color: #333333;
+    background-color: #333333cb;
     border-radius: 6px;
-   
+    border: 3px solid #85C7F2;
 }
