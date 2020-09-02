@@ -44,6 +44,7 @@ body{
     right: 0px;
     background-color: #85C7F2;
     text-align: center;
+    overflow-x: scroll;
 }
 
 .dragable{
@@ -53,6 +54,16 @@ body{
     position:absolute !important;
     border-radius: 30px;
     background-color: #7495AB;
+    opacity: 0.8;
+    z-index: 100;
 }
 
-
+.logo {
+    height: 500px;
+    width: 500px;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.35;
+}
