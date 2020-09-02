@@ -19,13 +19,28 @@ db.connect((err) =>{
     }
 });
 
-function getInfo(req, res){
-    let sql = 'SELECT * FROM test';
-    db.query(sql, (err, result) =>{
-        if(err) throw err;
-        console.log(result);
-        //res.send();
+
+async function dbQuery(sql){
+    let promise = new Promise(data => {
+        db.query(sql, function (error, result) { // change db->connection for your code
+            if (error) {
+                console.log(error);
+                throw error;
+            }
+            try {
+
+                data(result);
+
+            } catch (error) {
+                data({});
+                throw error;
+            }
+
+        });
     });
+
+    return promise = await promise;
+
 }
 
 var main = express();
@@ -40,5 +55,11 @@ var io = socket(server);
 
 io.on('connection', function(socket){
     console.log('made socket connection', socket.id);
+    
+    socket.on("GET_DATA", async function() {
+        var returnVal = await dbQuery("SELECT * FROM test");
+        returnVal = JSON.stringify(returnVal);
 
+        socket.emit("GET_DATA_RETURN", returnVal);
+    })
 });
