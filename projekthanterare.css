@@ -35,6 +35,11 @@ body{
     width: 35px;
     height: 35px;
     margin: auto;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 .block{
     position: absolute;
@@ -44,8 +49,11 @@ body{
     right: 0px;
     background-color: #85C7F2;
     text-align: center;
-    overflow-x: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 10;
 }
+
 
 .dragable{
     top: 20px;
@@ -61,9 +69,27 @@ body{
 .logo {
     height: 500px;
     width: 500px;
-    vertical-align: middle;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.35;
+    position: fixed;
+    top: 50px;
+    transform: translateX(-50%);
+    opacity: 0.35; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    z-index: -1;
+}
+::-webkit-scrollbar {
+    height: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333333;
+    border-radius: 6px;
+    border: 3px solid whitesmoke;
 }
