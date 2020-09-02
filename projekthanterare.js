@@ -4,6 +4,7 @@ var columnid = 0;
 var colums = new Array();
 var spacebetween = 200;
 
+
 class task {
     constructor(name, id, color, order) {
         this.name = name;
@@ -13,6 +14,7 @@ class task {
         this.pos = 0;
         this.element = document.body;
     }
+    
 
     updatepos() {
 
@@ -48,10 +50,9 @@ class task {
 
         }
 
-
         document.getElementById("block").appendChild(div);
         $('#' + div.id).css('left', (20 + div.id * 300) + 'px');
-
+        
 
         $(function () {
             $(".dragable").draggable();
@@ -60,6 +61,7 @@ class task {
         this.updatepos();
     }
 
+    
     remove() {
         colums.splice(this.order, 1);
         $("#" + this.order).remove();
