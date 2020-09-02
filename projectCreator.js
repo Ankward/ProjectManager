@@ -63,13 +63,19 @@ class task {
         div.appendChild(input);
         div.appendChild(input2);
         PList.appendChild(div);
+        
+        $(function () {
+            $(".dragable").draggable();
+        });
+
+        this.updatepos();
     }
 }
 
 window.onload = function () {
     document.getElementById("block").onclick = function () {
-        newtask = new task("Kim", 1, "Blå");
-        newtask.make();
+        colums.push(new task("Kim", 1, "Blå", columnid));
+        colums[columnid].make();
         
     }
 }
