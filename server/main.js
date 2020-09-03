@@ -61,5 +61,16 @@ io.on('connection', function(socket){
         returnVal = JSON.stringify(returnVal);
 
         socket.emit("GET_DATA_RETURN", returnVal);
-    })
+    });
+
 });
+
+
+/*
+    socket.on("INSERT_VALUE", async function() {
+        var returnVal = await dbQuery("INSERT INTO ......");
+        returnVal = JSON.stringify(returnVal);
+
+        socket.emit("INSERT_VALUE_RETURN", returnVal);
+    });
+*/
