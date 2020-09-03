@@ -43,7 +43,7 @@ class task {
         var btn = document.createElement('button')
         btn.type = "button";
         btn.value = "submit";
-        btn.innerHTML = "Sumbit";
+        btn.innerHTML = "Submit";
 
         if ($(".dragable")[0]) {
             div.className = 'dragable';
