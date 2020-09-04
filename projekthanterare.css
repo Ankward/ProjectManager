@@ -6,17 +6,19 @@ body{
 .bg{
     background:  #4C4C4C;
     position: absolute;
-<<<<<<< HEAD
-=======
     
->>>>>>> master
     left: 0px;
     height: 100vh;
     width: 400px;
     top: 0px;
 }
+.input{
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
 .dot {
-    position: absolute !important;
+    position: absolute;
     top: 20px;
     left: 20px;
     height: 60px;
@@ -27,12 +29,8 @@ body{
     align-items: center;
     font-size: 15px;
     color:  black;
-<<<<<<< HEAD
-     transition: 0.4s;
-=======
     
     transition: 0.4s;
->>>>>>> master
   }
 .dot:hover{
     background-color: rgb(87, 136, 241);
@@ -64,21 +62,33 @@ body{
     overflow-y: hidden;
     
 }
+.block2{
+    position: absolute;
+    width: 900px;
+    display: flex;
+    height: 100vh;
+    top: 0px;
+    right: 0px;
+    align-items: center;
+    justify-content: center;
+    background-color: #85C7F2;
+    text-align: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+}
 
 
 .dragable{
     top: 20px;
     width: 270px;
     height: 150px;
-    position:absolute !important;
+    position:absolute;
     border-radius: 30px;
-    background-color: #7495AB;
-<<<<<<< HEAD
+    background-color: #7495abbe;
     text-align: center;
-=======
-    opacity: 0.8;
-    
->>>>>>> master
+    color: white;
+    font-size: 20px;
 }
 
 .logo {

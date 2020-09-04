@@ -5,14 +5,11 @@ var columnid = 0;
 var colums = new Array();
 var spacebetween = 200;
 
-class task {
-    constructor(name, id, color, order) {
+class project {
+    constructor(name, id, date, ) {
         this.name = name;
         this.id = id;
-        this.color = color;
-        this.order = order;
-        this.pos = 0;
-        this.element = document.body;
+        this.date = date;
     }
 
     updatepos() {
@@ -29,19 +26,23 @@ class task {
         div.className = 'dragable';
         div.id = columnid;
         columnid += 1;
-        div.style.backgroundColor = "#7495AB";
         this.element = div;
         div.innerHTML = "New Project ";
+
         var input = document.createElement('input');
         input.type = "text";
         input.name = "projectName";
-        input.value = "Name";
+        input.placeholder = "Name";
+        input.className = 'input';
+
         var input2 = document.createElement('input');
         input2.type = "text";
         input2.name = "description";
-        input2.value = "Description";
+        input2.placeholder = "Description";
+        input2.className = 'input';
+
         var btn = document.createElement('button')
-        btn.type = "button";
+        btn.type = "submit";
         btn.value = "submit";
         btn.innerHTML = "Submit";
 
@@ -74,7 +75,7 @@ class task {
 
 window.onload = function () {
     document.getElementById("block").onclick = function () {
-        colums.push(new task("Kim", 1, "Blå", columnid));
+        colums.push(new project("Kim", 1, "Blå", columnid));
         colums[columnid].make();
         
     }
