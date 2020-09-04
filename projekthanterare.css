@@ -62,23 +62,27 @@ body{
     overflow-y: hidden;
     
 }
-.block2{
-    position: absolute;
-    width: 900px;
+.logo {
+    height: 500px;
+    width: 500px;
+    position: fixed;
     display: flex;
-    height: 100vh;
-    top: 0px;
-    right: 0px;
     align-items: center;
-    justify-content: center;
-    background-color: #85C7F2;
-    text-align: center;
-    overflow-x: auto;
-    overflow-y: hidden;
-    
+    justify-items: center;
+    opacity: 0.35;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  
 }
-
-
+#PList{
+    width: 450px;
+    height:450px;
+    margin-left: 400px;;
+    background-color: black;
+}
 .dragable{
     top: 20px;
     width: 270px;
