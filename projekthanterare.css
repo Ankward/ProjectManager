@@ -5,14 +5,14 @@ body{
 .bg{
     background:  #4C4C4C;
     position: absolute;
-    
+    z-index: -10;
     left: 0px;
     height: 100vh;
     width: 400px;
     top: 0px;
 }
 .dot {
-    position: absolute !important;
+    position: absolute;
     top: 20px;
     left: 20px;
     height: 60px;
@@ -23,7 +23,7 @@ body{
     align-items: center;
     font-size: 15px;
     color:  black;
-    
+    z-index: -1;
     transition: 0.4s;
   }
 .dot:hover{
@@ -43,6 +43,21 @@ body{
 }
 .block{
     position: absolute;
+    float: right;
+    width: 900px;
+    display: flex;
+    height: 100vh;
+    top: 0px;
+    right: 0px;
+    background-color: rgba( 133, 199, 242 0.6);
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 50;
+}
+
+.blockback{
+    position: relative;
+    float: right;
     width: 900px;
     display: flex;
     height: 100vh;
@@ -51,22 +66,23 @@ body{
     align-items: center;
     justify-content: center;
     background-color: #85C7F2;
-    text-align: center;
     overflow-x: auto;
     overflow-y: hidden;
-    
+    z-index: 5;
 }
 
 
 .dragable{
     top: 20px;
+    min-width: 270px;
+    margin: 15px;
     width: 270px;
     height: 150px;
-    position:absolute !important;
+    position: relative;
     border-radius: 30px;
-    background-color: #7495AB;
-    opacity: 0.8;
-    
+    overflow: auto;
+    background-color: rgba(	116, 149, 171, 0.8);
+    z-index: 100;
 }
 
 .logo {
@@ -76,15 +92,16 @@ body{
     display: flex;
     align-items: center;
     justify-items: center;
-    opacity: 0.35;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-  
+    opacity: 0.35;
+    z-index: inherit;
 }
 ::-webkit-scrollbar {
+    position: absolute;
     height: 12px;
 }
 
@@ -92,4 +109,20 @@ body{
     background-color: #333333cb;
     border-radius: 6px;
     border: 3px solid #85C7F2;
+}
+
+.addtask {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+    filter: invert(1);
+    z-index: 1000;
+}
+
+.taskstyle {
+    height: 50px;
+    width: 80px;
+    background-color: red;
 }
