@@ -33,31 +33,38 @@ class task {
         div.id = columnid;
         //colums.push(columnid);
         columnid += 1;
-        div.style.backgroundColor = "#7495AB";
         this.element = div;
+        var imageholder = document.createElement('div');
+        imageholder.className = 'imageholder';
+        var image = document.createElement('img');
+        image.src = "miniplus.png";
+        image.className = 'addtask';
+
 
         if ($(".dragable")[0]) {
             div.className = 'dragable';
-
+            
 
         } else {
 
         }
         if ($('[className="dragable"]').length > 1) {
             div.className = 'dragable';
-            div.style.backgroundColor = "#7495AB";
         } else {
 
         }
-       
 
-        document.getElementById("block").appendChild(div);
-        $('#' + div.id).css('left', (20 + div.id * 300) + 'px');
+
         
+        document.getElementById("block").appendChild(div);
+       // $('#' + div.id).css('left', (20 + div.id * 300) + 'px');
+        
+//drabable disabled $(function () {  $(".dragable").draggable();  });
 
-        $(function () {
-            $(".dragable").draggable();
-        });
+$( function() {
+    $( "#block" ).sortable();
+    $( "#block" ).disableSelection();
+  } );
 
         this.updatepos();
     }
@@ -80,7 +87,6 @@ class task {
     }
 
 }
-
 
 window.onload = function () {
     document.getElementById("block2").onclick = function () {
