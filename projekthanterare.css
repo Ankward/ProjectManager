@@ -50,11 +50,11 @@ body{
 .block{
     position: absolute;
     float: right;
-    width: 80vw;
+    width: 1520px;
     display: flex;
     height: 100vh;
     top: 0px;
-    right: 0px;
+    left: 400px;
     background-color: rgba( 133, 199, 242 0.6);
     overflow-x: auto;
     overflow-y: hidden;
@@ -62,13 +62,13 @@ body{
 }
 
 .blockback{
-    position: relative;
+    position: absolute;
     float: right;
-    width: 80vw;
+    width: 1520px;
     display: flex;
     height: 100vh;
     top: 0px;
-    right: 0px;
+    left: 400px;
     align-items: center;
     justify-content: center;
     background-color: #85C7F2;
@@ -147,7 +147,9 @@ body{
 }
 
 .taskstyle {
-    height: 50px;
-    width: 80px;
+    margin-left: 2%;
+    margin-top: 11%;
+    height: 40px;
+    width: 260px;
     background-color: red;
 }
