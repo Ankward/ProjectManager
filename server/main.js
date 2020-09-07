@@ -52,7 +52,7 @@ var server = main.listen(3000);
 //main.use(express.static('../index'));
 
 main.get('/', function(req, resp) {
-    resp.sendFile('index.html', {root: path.join(__dirname, '../index')});
+    resp.sendFile('index.html', {root: path.join(__dirname, '../projects')});
 });
 
 //Socket setup

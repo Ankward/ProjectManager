@@ -50,7 +50,7 @@ body{
 .block{
     position: absolute;
     float: right;
-    width: 1520px;
+    width: 80vw;
     display: flex;
     height: 100vh;
     top: 0px;
@@ -64,7 +64,7 @@ body{
 .blockback{
     position: absolute;
     float: right;
-    width: 1520px;
+    width: 80vw;
     display: flex;
     height: 100vh;
     top: 0px;
@@ -75,21 +75,6 @@ body{
     overflow-x: auto;
     overflow-y: hidden;
     z-index: 5;
-}
-.logo {
-    height: 500px;
-    width: 500px;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    opacity: 0.35;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  
 }
 #PList{
     width: 450px;
@@ -112,7 +97,6 @@ body{
 
 .logo {
     height: 500px;
-    width: 500px;
     position: fixed;
     display: flex;
     align-items: center;
@@ -123,7 +107,6 @@ body{
     -webkit-user-select: none;
     -ms-user-select: none;
     opacity: 0.35;
-    z-index: inherit;
 }
 ::-webkit-scrollbar {
     position: absolute;
