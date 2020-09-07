@@ -44,11 +44,7 @@ body{
 .block{
     position: absolute;
     float: right;
-<<<<<<< HEAD
-    width: 80vw;
-=======
     width: 1520px;
->>>>>>> c95a7e3984bca5d6ea66fc82c35b48680fcddfc1
     display: flex;
     height: 100vh;
     top: 0px;
@@ -62,11 +58,7 @@ body{
 .blockback{
     position: absolute;
     float: right;
-<<<<<<< HEAD
-    width: 80vw;
-=======
     width: 1520px;
->>>>>>> c95a7e3984bca5d6ea66fc82c35b48680fcddfc1
     display: flex;
     height: 100vh;
     top: 0px;
