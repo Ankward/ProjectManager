@@ -8,7 +8,7 @@ body{
     z-index: -10;
     left: 0px;
     height: 100vh;
-    width: 400px;
+    width: 20vw;
     top: 0px;
 }
 .dot {
@@ -44,11 +44,11 @@ body{
 .block{
     position: absolute;
     float: right;
-    width: 1520px;
-    display: flex;
+    width: 80vw;
     height: 100vh;
+    display: flex;
     top: 0px;
-    left: 400px;
+    right: 0;
     background-color: rgba( 133, 199, 242 0.6);
     overflow-x: auto;
     overflow-y: hidden;
@@ -58,11 +58,11 @@ body{
 .blockback{
     position: absolute;
     float: right;
-    width: 1520px;
+    width: 80vw;
     display: flex;
     height: 100vh;
     top: 0px;
-    left: 400px;
+    right: 0;
     align-items: center;
     justify-content: center;
     background-color: #85C7F2;
@@ -74,15 +74,14 @@ body{
 
 .dragable{
     top: 20px;
+    display:block;
     min-width: 270px;
     margin: 15px;
     width: 270px;
-    height: 150px;
+    height: 80vh;
     position: relative;
     border-radius: 30px;
-    overflow: auto;
     background-color: rgba(	116, 149, 171, 0.8);
-    z-index: 100;
 }
 
 .logo {

@@ -36,22 +36,25 @@ class category {
         div.id = columnid;
         this.id = columnid;
         //colums.push(columnid);
-        columnid += 1;
         this.element = div;
         var imageholder = document.createElement('div');
         imageholder.className = 'imageholder';
+        imageholder.id = columnid;
         var image = document.createElement('img');
         image.src = "miniplus.png";
         image.className = 'addtask';
 
+
         imageholder.onclick = function () {
             //div.appendChild(createtask);
-            var temp = new task("", "", this.id);
-            console.log(this.id);
-            temp.make(columnid -1);
+            var temp = new task("", "", imageholder.id);
+            console.log(imageholder.id);
+            temp.make(imageholder.id);
             tasks.push(temp);
             
         }
+
+        columnid += 1;
 
 
 
@@ -185,7 +188,7 @@ window.onload = function () {
     load();
 
     document.getElementById("block2").onclick = function () {
-        colums.push(new task("", 1, "", columnid));
+        colums.push(new category("", 1, "", columnid));
         colums[columnid].make();
         
         insertColumn("", "", columnid);
@@ -198,7 +201,7 @@ async function load(){
     for(var i = 0; i < retVal.length; i++){
         var tempObject = retVal[i]; 
         console.log(tempObject["memberId"] + " 1 " + tempObject["color"] + " " + tempObject["categoryId"]);
-        colums.push(new task(tempObject["memberId"], 1, tempObject["color"], tempObject["categoryId"]-1));
+        colums.push(new category(tempObject["memberId"], 1, tempObject["color"], tempObject["categoryId"]-1));
         colums[(tempObject["categoryId"]-1)].make();
     }
 }
