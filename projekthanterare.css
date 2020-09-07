@@ -6,7 +6,6 @@ body{
 .bg{
     background:  #4C4C4C;
     position: absolute;
-    z-index: -10;
     left: 0px;
     height: 100vh;
     width: 20vw;
@@ -49,7 +48,7 @@ body{
 .block{
     position: absolute;
     float: right;
-    width: 80vw;
+    width: 1520px;
     display: flex;
     height: 100vh;
     top: 0px;
@@ -62,7 +61,7 @@ body{
 .blockback{
     position: absolute;
     float: right;
-    width: 80vw;
+    width: 1520px;
     display: flex;
     height: 100vh;
     top: 0px;
@@ -73,12 +72,7 @@ body{
     overflow-x: auto;
     overflow-y: hidden;
 }
-#PList{
-    width: 450px;
-    height:450px;
-    margin-left: 400px;;
-    background-color: black;
-}
+
 .dragable{
     top: 20px;
     min-width: 270px;
@@ -94,6 +88,7 @@ body{
 
 .logo {
     height: 500px;
+    width: 500px;
     position: fixed;
     display: flex;
     align-items: center;
@@ -123,7 +118,6 @@ body{
     margin-right: 10px;
     float: right;
     filter: invert(1);
-    z-index: 1000;
 }
 
 .taskstyle {

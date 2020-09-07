@@ -13,12 +13,8 @@ class project {
     }
 
     updatepos() {
-        
         this.element = this.order;
-
-
         this.pos = spacebetween * this.order;
-
     }
 
     make() {
@@ -48,8 +44,6 @@ class project {
 
         if ($(".dragable")[0]) {
             div.className = 'dragable';
-           
-
         } else {
 
         }
@@ -71,11 +65,10 @@ class project {
         
         this.updatepos();
     }
-        
+
     remove() {
         colums.splice(this.order, 1);
         $("#" + this.order).remove();
-
 
         for (var i = 0; i < colums.length; i++) {
             if (colums[i].order > this.order) {
@@ -90,7 +83,6 @@ class project {
 window.onload = function () {
     document.getElementById("dot").onclick = function () {
         colums.push(new project("Kim", 1, "Blå", columnid));
-        colums[columnid].make();
-        
+        colums[columnid].make();  
     }
 }
