@@ -44,11 +44,15 @@ body{
 .block{
     position: absolute;
     float: right;
+<<<<<<< HEAD
     width: 80vw;
+=======
+    width: 1520px;
+>>>>>>> c95a7e3984bca5d6ea66fc82c35b48680fcddfc1
     display: flex;
     height: 100vh;
     top: 0px;
-    right: 0px;
+    left: 400px;
     background-color: rgba( 133, 199, 242 0.6);
     overflow-x: auto;
     overflow-y: hidden;
@@ -56,13 +60,17 @@ body{
 }
 
 .blockback{
-    position: relative;
+    position: absolute;
     float: right;
+<<<<<<< HEAD
     width: 80vw;
+=======
+    width: 1520px;
+>>>>>>> c95a7e3984bca5d6ea66fc82c35b48680fcddfc1
     display: flex;
     height: 100vh;
     top: 0px;
-    right: 0px;
+    left: 400px;
     align-items: center;
     justify-content: center;
     background-color: #85C7F2;
