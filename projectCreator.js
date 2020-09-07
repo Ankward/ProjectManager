@@ -55,7 +55,6 @@ class project {
         }
         if ($('[className="dragable"]').length > 1) {
             div.className = 'dragable';
-            div.style.backgroundColor = "#7495AB";
         } else {
 
         }
@@ -63,18 +62,33 @@ class project {
         div.appendChild(btn);
         div.appendChild(input);
         div.appendChild(input2);
-        PList.appendChild(div);
+        document.getElementById("block").appendChild(div);
         
-        $(function () {
-            $(".dragable").draggable();
-        });
-
+        $( function() {
+            $( "#block" ).sortable();
+            $( "#block" ).disableSelection();
+          } );
+        
         this.updatepos();
+    }
+        
+    remove() {
+        colums.splice(this.order, 1);
+        $("#" + this.order).remove();
+
+
+        for (var i = 0; i < colums.length; i++) {
+            if (colums[i].order > this.order) {
+                document.getElementById(colums[i].order).id = (colums[i].order - 1);
+                colums[i].order -= 1;
+                colums[i].updatepos();
+            }
+        }
     }
 }
 
 window.onload = function () {
-    document.getElementById("block").onclick = function () {
+    document.getElementById("dot").onclick = function () {
         colums.push(new project("Kim", 1, "Blå", columnid));
         colums[columnid].make();
         
