@@ -84,6 +84,7 @@ body{
     overflow: auto;
     background-color: rgba(	116, 149, 171, 0.8);
     text-align: center;
+    z-index: 10;
 }
 
 .logo {

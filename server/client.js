@@ -33,3 +33,15 @@ function insertColumn(name, color, id){
     socket.emit("INSERT_NEW_COLUMN", name, color, id);
 
 }
+function newProject(projectName, description){
+    console.log(projectName+" "+description);
+    var joinCode = randomString(8, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    
+    socket.emit("INSERT_NEW_PROJECT", projectName, description, joinCode);
+    
+}
+function randomString(length, chars) {
+    var result = '';
+    for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+    return result;
+}

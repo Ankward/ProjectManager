@@ -75,7 +75,11 @@ io.on('connection', function(socket){
 
         await dbQuery("INSERT INTO category(projectId, categoryName, color) VALUES (545, 'testaa', 'black');");
     });
-
+    
+    socket.on("INSERT_NEW_PROJECT", async function(name, desc, code) {
+        await dbQuery("INSERT INTO project(projectName, description, joinCode) VALUES ('" + name + "', '" + desc + "', '"+ code +"');");
+        
+    });
 });
 
 

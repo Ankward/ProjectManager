@@ -29,18 +29,25 @@ class project {
         input.type = "text";
         input.name = "projectName";
         input.placeholder = "Name";
+        input.id = "projectName";
         input.className = 'input';
 
         var input2 = document.createElement('input');
         input2.type = "text";
         input2.name = "description";
         input2.placeholder = "Description";
+        input2.id = "description";
         input2.className = 'input';
 
         var btn = document.createElement('button')
         btn.type = "submit";
         btn.value = "submit";
+        btn.id = "submit";
         btn.innerHTML = "Submit";
+        btn.onclick = function (){
+        var inputArray = Array.from(document.querySelectorAll('.dragable input')).reduce((acc,input) => ({...acc,[input.id]: input.value}), {});
+        newProject(inputArray.projectName, inputArray.description);
+        }
 
         if ($(".dragable")[0]) {
             div.className = 'dragable';
@@ -82,7 +89,10 @@ class project {
 
 window.onload = function () {
     document.getElementById("dot").onclick = function () {
-        colums.push(new project("Kim", 1, "Blå", columnid));
+        colums.push(new project("", 1, "", columnid));
         colums[columnid].make();  
-    }
+        
+    } 
 }
+
+    
