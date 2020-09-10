@@ -94,6 +94,9 @@ class category {
 $( function() {
     $( "#block" ).sortable();
     $( "#block" ).disableSelection();
+
+   
+    
   } );
 
         this.updatepos();
@@ -181,11 +184,12 @@ $( function() {
 
 }
 
+
 window.onload = function () {
     load();
 
     document.getElementById("block2").onclick = function () {
-        colums.push(new task("", 1, "", columnid));
+        colums.push(new category("", 1, "", columnid));
         colums[columnid].make();
         
         insertColumn("", "", columnid);
@@ -198,7 +202,7 @@ async function load(){
     for(var i = 0; i < retVal.length; i++){
         var tempObject = retVal[i]; 
         console.log(tempObject["memberId"] + " 1 " + tempObject["color"] + " " + tempObject["categoryId"]);
-        colums.push(new task(tempObject["memberId"], 1, tempObject["color"], tempObject["categoryId"]-1));
+        colums.push(new category(tempObject["memberId"], 1, tempObject["color"], tempObject["categoryId"]-1));
         colums[(tempObject["categoryId"]-1)].make();
     }
 }
