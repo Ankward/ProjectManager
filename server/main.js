@@ -69,7 +69,13 @@ io.on('connection', function(socket){
 
         socket.emit("GET_DATA_RETURN", returnVal);
     });
+    socket.on("GET_DATA_RAND", async function() {
+        var randomNum = await dbQuery("SELECT joinCode FROM project;");
+        randomNum = JSON.stringify(randomNum);
+        randomNum = JSON.parse(randomNum);
 
+        socket.emit("GET_DATA_RAND_RETURN", randomNum);
+    });
     socket.on("INSERT_NEW_COLUMN", async function(name, color, id) {
         console.log(name + " " + color + " " + id);
 
