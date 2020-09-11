@@ -52,7 +52,7 @@ body {
 .block {
     position: absolute;
     float: right;
-    width: 80vw;
+    width: 1520px;
     height: 100vh;
     display: flex;
     top: 0px;
@@ -78,7 +78,7 @@ body {
 }
 
 .dragable{
-    top: 20px;
+    top: 400px;
     min-width: 270px;
     margin: 15px;
     width: 270px;
