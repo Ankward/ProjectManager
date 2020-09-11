@@ -16,7 +16,7 @@ class category {
         this.pos = 0;
         this.element = document.body;
     }
-    
+
 
 
     updatepos() {
@@ -29,77 +29,72 @@ class category {
     }
 
     make() {
-
-
-        var div = document.createElement('div');
-        div.className = 'dragable';
-        div.id = columnid;
         this.id = columnid;
+
+        this.element = document.createElement('li');
+        this.element.className = 'dragable';
+        this.element.id = this.id;
         //colums.push(columnid);
-        columnid += 1;
-        this.element = div;
         var imageholder = document.createElement('div');
         imageholder.className = 'imageholder';
+        imageholder.id = columnid;
         var image = document.createElement('img');
         image.src = "miniplus.png";
         image.className = 'addtask';
 
+
         imageholder.onclick = function () {
             //div.appendChild(createtask);
-            var temp = new task("", "", this.id);
-            console.log(this.id);
-            temp.make(columnid -1);
+            var temp = new task("", "", imageholder.id);
+            temp.make(imageholder.id);
             tasks.push(temp);
-            
+
         }
 
-
+        columnid += 1;
 
         if ($(".dragable")[0]) {
-            div.className = 'dragable';
-            
-
-        } else {
-
+            this.element.className = 'dragable';
         }
+
         if ($('[className="dragable"]').length > 1) {
-            div.className = 'dragable';
-        } else {
-
+            this.element.className = 'dragable';
         }
 
 
-        if ($(".taskstyle")[0]) {
-            createtask.className = 'taskstyle';
-            
 
-        } else {
-
-        }
-        if ($('[className="taskstyle"]').length > 1) {
-            createtask.className = 'taskstyle';
-        } else {
-
-        }
-
-        
         imageholder.appendChild(image);
-        div.appendChild(imageholder);
-        document.getElementById("block").appendChild(div);
-        //$('#' + createtask.id).css('down', (20 + createtask.id*300) + 'px');
-       // $('#' + div.id).css('left', (20 + div.id * 300) + 'px');
-        
-//drabable disabled $(function () {  $(".dragable").draggable();  });
+        this.element.appendChild(imageholder);
+        document.getElementById("block").appendChild(this.element);
 
-$( function() {
-    $( "#block" ).sortable();
-    $( "#block" ).disableSelection();
-  } );
+        $(function () {
+            $("#block").sortable({
+                start: function (event, ui) {
+                    var start_pos = ui.item.index();
+                    ui.item.data('start_pos', start_pos);
+                },
+                update: function (event, ui) {
+                    var index = 0;
+                    $(".dragable").each(function () {
+                        this.id = index;
+                        index++;
+                    });
+
+                }
+            });
+
+        });
+        $('#block').append(this.element);
+
+        $(".dragable").sortable({
+            connectWith: ".dragable"
+        }).disableSelection();
+
 
         this.updatepos();
     }
 
-    
+
     remove() {
         colums.splice(this.order, 1);
         $("#" + this.order).remove();
@@ -125,7 +120,7 @@ class task {
         this.category = category;
         this.element = document.body;
     }
-    
+
 
     updatepos() {
 
@@ -142,27 +137,21 @@ class task {
         var div = document.createElement('div');
         div.className = 'taskstyle';
         this.element = div;
-        console.log(parentId);
         document.getElementById(parentId).appendChild(this.element);
 
 
-        
+
         //imageholder.appendChild(image);
         //div.appendChild(imageholder);
         //document.getElementById("block").appendChild(div);
-       // $('#' + div.id).css('left', (20 + div.id * 300) + 'px');
-        
-//drabable disabled $(function () {  $(".dragable").draggable();  });
+        // $('#' + div.id).css('left', (20 + div.id * 300) + 'px');
 
-$( function() {
-    $( "#block" ).sortable();
-    $( "#block" ).disableSelection();
-  } );
+        //drabable disabled $(function () {  $(".dragable").draggable();  });
 
         this.updatepos();
     }
 
-    
+
     remove() {
         colums.splice(this.order, 1);
         $("#" + this.order).remove();
@@ -185,20 +174,20 @@ window.onload = function () {
     load();
 
     document.getElementById("block2").onclick = function () {
-        colums.push(new task("", 1, "", columnid));
+        colums.push(new category("", 1, "", columnid));
         colums[columnid].make();
-        
-        insertColumn("", "", columnid);
+
+        //insertColumn("", "", columnid);
     }
 }
 
 
-async function load(){
+async function load() {
     var retVal = await loadObjects();
-    for(var i = 0; i < retVal.length; i++){
-        var tempObject = retVal[i]; 
-        console.log(tempObject["memberId"] + " 1 " + tempObject["color"] + " " + tempObject["categoryId"]);
-        colums.push(new task(tempObject["memberId"], 1, tempObject["color"], tempObject["categoryId"]-1));
-        colums[(tempObject["categoryId"]-1)].make();
+    for (var i = 0; i < retVal.length; i++) {
+        var tempObject = retVal[i];
+        //console.log(tempObject["memberId"] + " 1 " + tempObject["color"] + " " + tempObject["categoryId"]);
+        colums.push(new category(tempObject["memberId"], 1, tempObject["color"], tempObject["categoryId"] - 1));
+        colums[(tempObject["categoryId"] - 1)].make();
     }
 }

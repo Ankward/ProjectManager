@@ -1,16 +1,18 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
-.bg{
-    background:  #4C4C4C;
+
+.bg {
+    background: #4C4C4C;
     position: absolute;
     z-index: -10;
     left: 0px;
     height: 100vh;
-    width: 400px;
+    width: 20vw;
     top: 0px;
 }
+
 .dot {
     position: absolute;
     top: 20px;
@@ -22,15 +24,17 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 15px;
-    color:  black;
+    color: black;
     z-index: -1;
     transition: 0.4s;
-  }
-.dot:hover{
+}
+
+.dot:hover {
     background-color: rgb(87, 136, 241);
     transition: 0.2s;
 }
-.plus{
+
+.plus {
     position: absolute;
     width: 35px;
     height: 35px;
@@ -41,28 +45,29 @@ body{
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-.block{
+
+.block {
     position: absolute;
     float: right;
-    width: 1520px;
-    display: flex;
+    width: 80vw;
     height: 100vh;
+    display: flex;
     top: 0px;
-    left: 400px;
-    background-color: rgba( 133, 199, 242 0.6);
+    right: 0;
+    background-color: rgba(133, 199, 242 0.6);
     overflow-x: auto;
     overflow-y: hidden;
     z-index: 50;
 }
 
-.blockback{
+.blockback {
     position: absolute;
     float: right;
-    width: 1520px;
+    width: 80vw;
     display: flex;
     height: 100vh;
     top: 0px;
-    left: 400px;
+    right: 0;
     align-items: center;
     justify-content: center;
     background-color: #85C7F2;
@@ -72,17 +77,19 @@ body{
 }
 
 
-.dragable{
+.dragable {
     top: 20px;
     min-width: 270px;
     margin: 15px;
     width: 270px;
-    height: 150px;
+    height: 80vh;
     position: relative;
     border-radius: 30px;
-    overflow: auto;
-    background-color: rgba(	116, 149, 171, 0.8);
-    z-index: 100;
+    background-color: rgba(116, 149, 171, 0.8);
+    display: flex;
+    flex-direction: column;
+    padding-top:60px;
+    align-items: center;
 }
 
 .logo {
@@ -100,6 +107,7 @@ body{
     opacity: 0.35;
     z-index: inherit;
 }
+
 ::-webkit-scrollbar {
     position: absolute;
     height: 12px;
@@ -112,19 +120,26 @@ body{
 }
 
 .addtask {
+    position: absolute;
     width: 20px;
     height: 20px;
     margin-top: 10px;
     margin-right: 10px;
-    float: right;
+    right: 5px;
+    top:5px;
     filter: invert(1);
-    z-index: 1000;
+}
+
+.addtask:hover{
+    filter: invert(0);
 }
 
 .taskstyle {
-    margin-left: 2%;
-    margin-top: 11%;
-    height: 40px;
-    width: 260px;
-    background-color: red;
+    position: relative;
+    height: 130px;
+    width: 240px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.219);
+    border-radius: 20px;
+
 }
