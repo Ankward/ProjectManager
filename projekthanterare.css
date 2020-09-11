@@ -9,7 +9,7 @@ body {
     position: absolute;
     left: 0px;
     height: 100vh;
-    width: 20vw;
+    width: 400px;
     top: 0px;
 }
 .input{
@@ -65,7 +65,7 @@ body {
 .blockback {
     position: absolute;
     float: right;
-    width: 80vw;
+    width: 1520px;
     display: flex;
     height: 100vh;
     top: 0px;
@@ -78,7 +78,7 @@ body {
 }
 
 .dragable{
-    top: 400px;
+    top: 20px;
     min-width: 270px;
     margin: 15px;
     width: 270px;
@@ -90,6 +90,7 @@ body {
     flex-direction: column;
     padding-top:60px;
     align-items: center;
+    z-index: 100;
 }
 
 .logo {
