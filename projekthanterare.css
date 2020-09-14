@@ -1,291 +1,291 @@
+
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .bg {
-    background: #4C4C4C;
-    position: absolute;
-    z-index: -10;
-    left: 0px;
-    height: 100vh;
-    width: 20vw;
-    top: 0px;
+  background: #4C4C4C;
+  position: absolute;
+  z-index: -10;
+  left: 0px;
+  height: 100vh;
+  width: 20vw;
+  top: 0px;
 }
 
 .dot {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    height: 60px;
-    width: 60px;
-    background-color: #85C7F2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    color: black;
-    z-index: -1;
-    transition: 0.4s;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 60px;
+  width: 60px;
+  background-color: #85C7F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: black;
+  z-index: -1;
+  transition: 0.4s;
 }
 
 .dot:hover {
-    background-color: rgb(87, 136, 241);
-    transition: 0.2s;
+  background-color: rgb(87, 136, 241);
+  transition: 0.2s;
 }
 
 .plus {
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    margin: auto;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  margin: auto;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .block {
-    position: absolute;
-    float: right;
-    width: 80vw;
-    height: 100vh;
-    display: flex;
-    top: 0px;
-    right: 0;
-    background-color: rgba(133, 199, 242 0.6);
-    overflow-x: auto;
-    overflow-y: hidden;
-    z-index: 50;
+  position: absolute;
+  float: right;
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  top: 0px;
+  right: 0;
+  background-color: rgba(133, 199, 242 0.6);
+  overflow-x: auto;
+  overflow-y: hidden;
+  z-index: 50;
 }
 
 .blockback {
-    position: absolute;
-    float: right;
-    width: 80vw;
-    display: flex;
-    height: 100vh;
-    top: 0px;
-    right: 0;
-    align-items: center;
-    justify-content: center;
-    background-color: #85C7F2;
-    overflow-x: auto;
-    overflow-y: hidden;
-    z-index: 5;
+  position: absolute;
+  float: right;
+  width: 80vw;
+  display: flex;
+  height: 100vh;
+  top: 0px;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #85C7F2;
+  overflow-x: auto;
+  overflow-y: hidden;
+  z-index: 5;
 }
 
 
 .dragable {
-    top: 100px;
-    left: 50px;
-    min-width: 270px;
-    margin: 15px;
-    width: 270px;
-    height: 75vh;
-    position: relative;
-    border-radius: 30px;
-    background-color: rgba(116, 149, 171, 0.8);
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-    align-items: center;
+  top: 100px;
+  left: 50px;
+  min-width: 270px;
+  margin: 15px;
+  width: 270px;
+  height: 75vh;
+  position: relative;
+  border-radius: 30px;
+  background-color: rgba(116, 149, 171, 0.8);
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  align-items: center;
 }
 
 .logo {
-    height: 500px;
-    width: 500px;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    opacity: 0.35;
-    z-index: inherit;
+  height: 500px;
+  width: 500px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  opacity: 0.35;
+  z-index: inherit;
 }
 
 ::-webkit-scrollbar {
-    position: absolute;
-    height: 12px;
+  position: absolute;
+  height: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #333333cb;
-    border-radius: 6px;
-    border: 3px solid #85C7F2;
+  background-color: #333333cb;
+  border-radius: 6px;
+  border: 3px solid #85C7F2;
 }
 
 .addtask {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    margin-top: 10px;
-    margin-right: 10px;
-    right: 5px;
-    top:5px;
-    filter: invert(1);
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  right: 5px;
+  top:5px;
+  filter: invert(1);
 }
 
 .addtask:hover{
-    filter: invert(0);
+  filter: invert(0);
 }
 
 .taskstyle {
-    position: relative;
-    height: 130px;
-    width: 240px;
-    margin-bottom: 15px;
-    background-color: rgba(255, 255, 255, 0.219);
-    border-radius: 20px;
+  position: relative;
+  height: 130px;
+  width: 240px;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.219);
+  border-radius: 20px;
 
 }
 
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    
-    
-  }
-  
-  /* Style the list items */
-  ul li {
-      top: 20px;
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 8px;
-    color: beige;
-    font-size: 18px;
-    transition: 0.2s;
-    font-family: 'Courier New', Courier, monospace;
-    width: 88.5%;
-    
-    
-    /* make the list items unselectable */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   
   
-  
-  /* Darker background-color on hover */
-  ul li:hover {
-    background: #636363;
-  }
-  
-  
-  /* Style the close button */
-  .close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 12px 19px 12px 18px;
-  }
-  
-  .close:hover {
-    background-color: #f44336;
-    color: white;
-  }
-  .container{
-      position: relative;
-      top: 250px;
-      left: 20px;
-      width: 200px;
-  }
-  /* Style the header */
-  .header {
-    color: white;
-    text-align: center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    
-  }
-  h2{
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    
-  }
-  
-  /* Clear floats after the header */
-  .header:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Style the input */
-  input {
-    margin: 0;
-    border: none;
-    border-radius: 0;
-    width: 70%;
-    height: 20%;
-    padding: 10px;
-    float: left;
-    font-size: 16px;
-  }
-  
-  /* Style the "Add" button */
-  .addBtn {
-    padding: 10px;
-    width: 25%;
-    background: #d9d9d9;
-    color: #555;
-    float: left;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 0;
-  }
-  
-  .addBtn:hover {
-    background-color: #bbb;
-  }
-  .test{
-    position: absolute;
-    left: 70px;
-    top: 40px;
-    height: 160px;
-  }
- input.yeet[type=text] {
-    padding: 0;
-    height: 30px;
-    position: relative;
-    left: 0;
-    outline: none;
-    border: 1px solid #cdcdcd;
-    border-color: rgba(0, 0, 0, .15);
-    background-color: #85C7F2;
-    font-size: 25px;
-    font-family: 'Balsamiq Sans';
-    
-    font-weight: 600;
-  }
-  
-  .contain{
-    overflow-y: scroll;
-    height: 200px;
-    width: 220px;
-  }
+}
 
-  .contain::-webkit-scrollbar {
-    width: 5px;
+/* Style the list items */
+ul li {
+    top: 20px;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 8px;
+  color: beige;
+  font-size: 18px;
+  transition: 0.2s;
+  font-family: 'Courier New', Courier, monospace;
+  width: 88.5%;
+  
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #636363;
+}
+
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 19px 12px 18px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+.container{
+    position: relative;
+    top: 250px;
+    left: 20px;
+    width: 200px;
+}
+/* Style the header */
+.header {
+  color: white;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  
+}
+h2{
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 70%;
+  height: 20%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+.test{
+  position: absolute;
+  left: 70px;
+  top: 40px;
+  height: 160px;
+}
+input.yeet[type=text] {
+  padding: 0;
+  height: 30px;
+  position: relative;
+  left: 0;
+  outline: none;
+  border: 1px solid #cdcdcd;
+  border-color: rgba(0, 0, 0, .15);
+  background-color: #85C7F2;
+  font-size: 25px;
+  font-family: 'Balsamiq Sans';
+  
+  font-weight: 600;
+}
+
+.contain{
+  overflow-y: scroll;
+  height: 200px;
+  width: 220px;
+}
+
+.contain::-webkit-scrollbar {
+  width: 5px;
 }
 
 .contain::-webkit-scrollbar-track {
-   
-    border-radius: 10px;
+ 
+  border-radius: 10px;
 }
-
