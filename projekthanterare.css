@@ -1,15 +1,15 @@
-body{
+body {
     margin: 0;
     padding: 0;
     
 }
-.bg{
-    background:  #4C4C4C;
+
+.bg {
+    background: #4C4C4C;
     position: absolute;
-    z-index: -10;
     left: 0px;
     height: 100vh;
-    width: 20vw;
+    width: 400px;
     top: 0px;
 }
 .input{
@@ -28,15 +28,16 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 15px;
-    color:  black;
-    z-index: -1;
+    color: black;
     transition: 0.4s;
-  }
-.dot:hover{
+}
+
+.dot:hover {
     background-color: rgb(87, 136, 241);
     transition: 0.2s;
 }
-.plus{
+
+.plus {
     position: absolute;
     width: 1.5vw;
     height: 2.5vh;
@@ -47,66 +48,48 @@ body{
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-.block{
+
+.block {
     position: absolute;
     float: right;
-    width: 80vw;
-    display: flex;
+    width: 1520px;
     height: 100vh;
+    display: flex;
     top: 0px;
-    right: 0px;
-    background-color: rgba( 133, 199, 242 0.6);
+    right: 0;
+    background-color: rgba(133, 199, 242 0.6);
     overflow-x: auto;
     overflow-y: hidden;
-    z-index: 50;
 }
 
-.blockback{
-    position: relative;
+.blockback {
+    position: absolute;
     float: right;
-    width: 80vw;
+    width: 1520px;
     display: flex;
     height: 100vh;
     top: 0px;
-    right: 0px;
+    right: 0;
     align-items: center;
     justify-content: center;
     background-color: #85C7F2;
     overflow-x: auto;
     overflow-y: hidden;
-    z-index: 5;
 }
-.logo {
-    height: 500px;
-    width: 500px;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    opacity: 0.35;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  
-}
-#PList{
-    width: 450px;
-    height:450px;
-    margin-left: 400px;;
-    background-color: black;
-}
+
 .dragable{
     top: 20px;
     min-width: 270px;
     margin: 15px;
     width: 270px;
-    height: 150px;
+    height: 80vh;
     position: relative;
     border-radius: 30px;
-    overflow: auto;
-    background-color: rgba(	116, 149, 171, 0.8);
+    background-color: rgba(116, 149, 171, 0.8);
+    display: flex;
+    flex-direction: column;
+    padding-top:60px;
+    align-items: center;
     z-index: 100;
 }
 
@@ -123,8 +106,8 @@ body{
     -webkit-user-select: none;
     -ms-user-select: none;
     opacity: 0.35;
-    z-index: inherit;
 }
+
 ::-webkit-scrollbar {
     position: absolute;
     height: 1.2vh;
@@ -137,17 +120,26 @@ body{
 }
 
 .addtask {
+    position: absolute;
     width: 20px;
     height: 20px;
     margin-top: 10px;
     margin-right: 10px;
-    float: right;
+    right: 5px;
+    top:5px;
     filter: invert(1);
-    z-index: 1000;
+}
+
+.addtask:hover{
+    filter: invert(0);
 }
 
 .taskstyle {
-    height: 50px;
-    width: 80px;
-    background-color: red;
+    position: relative;
+    height: 130px;
+    width: 240px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.219);
+    border-radius: 20px;
+
 }
